@@ -40,23 +40,25 @@ ruleset: mania
 
 ### Use forks and branches
 
-For example, if you want to switch branch to:
-https://github.com/Eve-ning/osu/tree/osu-tools-docker-testbranch
-
-> Note: It's a real branch, with inflated SR for debugging purposes.
+For example, if you want to use:
+1) The osu branch: https://github.com/Eve-ning/osu/tree/osu-tools-docker-testbranch
+2) The osu-tools branch: https://github.com/Eve-ning/osu-tools/tree/impl-strain-json
 
 Your `.env` should look like
 
 ```dotenv
-GITHUB_USERNAME="Eve-ning"
-GITHUB_BRANCHNAME="osu-tools-docker-testbranch"
+OSU_GIT="https://github.com/ppy/osu"
+OSU_TOOLS_GIT="https://github.com/ppy/osu-tools"
 ```
 
-Follow the same procedure above, it should change
+Follow the same procedure above
 
 ```shell
 dotnet run -- difficulty 767046
 ```
+
+As our osu branch inflates the SR, it should rise.
+
 ```
 ruleset: mania
 
