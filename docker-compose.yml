@@ -1,0 +1,13 @@
+version: "0.1"
+
+services:
+  tools-service:
+    image: tools
+    stdin_open: true
+    container_name: osu-tools
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        - GIT_USERNAME=${GIT_USERNAME}
+        - GIT_BRANCHNAME=${GIT_BRANCHNAME}
