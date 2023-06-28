@@ -1,5 +1,7 @@
 # osu! Tools on Docker
 
+[![Docker Compose CI](https://github.com/Eve-ning/osu-tools-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Eve-ning/osu-tools-docker/actions/workflows/docker-image.yml)
+
 Runs [osu-tools](https://github.com/ppy/osu-tools) in a Docker container.
 
 - Supports switching branches for both `osu` and `osu-tools`.
