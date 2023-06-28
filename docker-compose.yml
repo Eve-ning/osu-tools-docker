@@ -9,5 +9,5 @@ services:
       context: .
       dockerfile: Dockerfile
       args:
-        - GITHUB_USERNAME=${GITHUB_USERNAME}
-        - GITHUB_BRANCHNAME=${GITHUB_BRANCHNAME}
+        - OSU_GIT=${OSU_GIT}
+        - OSU_TOOLS_GIT=${OSU_TOOLS_GIT}
