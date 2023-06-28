@@ -47,8 +47,8 @@ For example, if you want to use:
 Your `.env` should look like
 
 ```dotenv
-OSU_GIT="https://github.com/ppy/osu"
-OSU_TOOLS_GIT="https://github.com/ppy/osu-tools"
+OSU_GIT="https://github.com/Eve-ning/osu/tree/osu-tools-docker-testbranch"
+OSU_TOOLS_GIT="https://github.com/Eve-ning/osu-tools/tree/impl-strain-json"
 ```
 
 Follow the same procedure above
