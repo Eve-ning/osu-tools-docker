@@ -10,4 +10,6 @@ services:
       dockerfile: Dockerfile
       args:
         - OSU_GIT=${OSU_GIT}
+        - OSU_GIT_BRANCH=${OSU_GIT_BRANCH}
         - OSU_TOOLS_GIT=${OSU_TOOLS_GIT}
+        - OSU_TOOLS_GIT_BRANCH=${OSU_TOOLS_GIT_BRANCH}

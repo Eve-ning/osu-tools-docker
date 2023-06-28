@@ -1,0 +1,24 @@
+name: Docker Compose CI
+
+on:
+  pull_request:
+    branches: [ "master" ]
+  push:
+    branches: [ "master" ]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Build the Docker image
+      run: |
+        docker compose --env-file test/.test.env up --wait
+
+    - name: Test if Star Rating is inside JSON
+      run:  |
+         docker exec osu-tools dotnet run -- difficulty 767046 -j | grep 'star_rating';

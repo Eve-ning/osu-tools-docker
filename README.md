@@ -1,9 +1,10 @@
 # osu! Tools on Docker
 
+[![Docker Compose CI](https://github.com/Eve-ning/osu-tools-docker/actions/workflows/docker-image.yml/badge.svg)](https://github.com/Eve-ning/osu-tools-docker/actions/workflows/docker-image.yml)
+
 Runs [osu-tools](https://github.com/ppy/osu-tools) in a Docker container.
 
-This supports switching branches, just swap in your `GITHUB_USERNAME` and `GITHUB_BRANCH` in the `.env` file, and run
-`docker compose up --build`.
+- Supports switching branches for both `osu` and `osu-tools`.
 
 ## Example
 
@@ -47,8 +48,10 @@ For example, if you want to use:
 Your `.env` should look like
 
 ```dotenv
-OSU_GIT="https://github.com/ppy/osu"
-OSU_TOOLS_GIT="https://github.com/ppy/osu-tools"
+OSU_GIT="https://github.com/Eve-ning/osu.git"
+OSU_GIT_BRANCH="osu-tools-docker-testbranch"
+OSU_TOOLS_GIT="https://github.com/Eve-ning/osu-tools.git"
+OSU_TOOLS_GIT_BRANCH="impl-strain-json"
 ```
 
 Follow the same procedure above
