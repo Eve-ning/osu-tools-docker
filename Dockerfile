@@ -10,7 +10,7 @@ RUN git clone https://github.com/ppy/osu
 
 WORKDIR /project/osu
 # Only switch branch if it's not already the default.
-RUN if [ $GIT_USERNAME != ppy -o $GIT_BRANCHNAME != master ]; \
+RUN if [ "$GITHUB_USERNAME" != ppy ] || [ "$GITHUB_BRANCHNAME" != master ]; \
     then  \
     git remote add ${GIT_USERNAME} https://github.com/${GIT_USERNAME}/osu.git \
     && git fetch ${GIT_USERNAME} ${GIT_BRANCHNAME} \
