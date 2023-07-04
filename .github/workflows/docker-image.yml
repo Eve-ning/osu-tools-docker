@@ -21,4 +21,4 @@ jobs:
 
     - name: Test if Star Rating is inside JSON
       run:  |
-         docker exec osu-tools dotnet run -- difficulty 767046 -j | grep 'star_rating';
+         docker exec osu.tools dotnet run -- difficulty 767046 -j | grep 'star_rating';
