@@ -21,7 +21,7 @@ docker compose up
 It will spin up a container `osu-tools`, which you can access via docker `exec`
 
 ```shell
-docker exec -it osu-tools sh
+docker exec -it osu.tools sh
 ```
 
 It will run shell, which then you can use commands in `osu-tools`
