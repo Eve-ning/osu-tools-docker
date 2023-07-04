@@ -27,7 +27,7 @@ docker exec -it osu-tools sh
 It will run shell, which then you can use commands in `osu-tools`
 
 ```shell
-dotnet run -- difficulty 767046
+dotnet PerformanceCalculator.dll difficulty 767046
 ```
 ```
 ruleset: mania
@@ -57,7 +57,7 @@ OSU_TOOLS_GIT_BRANCH="impl-strain-json"
 Follow the same procedure above
 
 ```shell
-dotnet run -- difficulty 767046
+dotnet PerformanceCalculator.dll difficulty 767046
 ```
 
 As our osu branch inflates the SR, it should rise.
