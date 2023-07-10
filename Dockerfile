@@ -16,7 +16,7 @@ RUN /bin/bash -c ./UseLocalOsu.sh
 WORKDIR /project/osu-tools/PerformanceCalculator
 RUN dotnet build -o /osu.tools.build
 
-FROM mcr.microsoft.com/dotnet/sdk:6.0
+FROM mcr.microsoft.com/dotnet/runtime:6.0-alpine3.18
 WORKDIR /osu.tools.build
 COPY --from=base /osu.tools.build /osu.tools.build
 
