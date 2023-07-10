@@ -2,12 +2,25 @@ version: "3.8"
 
 services:
   osu.tools:
-    image: osu.tools.img
+    image: osu.tools
     stdin_open: true
     container_name: osu.tools
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: shell.Dockerfile
+      args:
+        - OSU_GIT=${OSU_GIT}
+        - OSU_GIT_BRANCH=${OSU_GIT_BRANCH}
+        - OSU_TOOLS_GIT=${OSU_TOOLS_GIT}
+        - OSU_TOOLS_GIT_BRANCH=${OSU_TOOLS_GIT_BRANCH}
+
+  osu.tools.gui:
+    image: osu.tools.gui
+    stdin_open: true
+    container_name: osu.tools.gui
+    build:
+      context: .
+      dockerfile: gui.Dockerfile
       args:
         - OSU_GIT=${OSU_GIT}
         - OSU_GIT_BRANCH=${OSU_GIT_BRANCH}
